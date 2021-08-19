@@ -48,7 +48,7 @@ public class TestJDKClassLoader {
         //java.class.path(classpath)
         // 根据Java应用的CLASSPATH来加载Java类
         // Java中的应用类都是通过它来加载的
-        System.out.println("appClassloader加载以下文件");
+        System.out.println("appClassloader加载以下文件:");
         String appClassLoadUrlList =
             Stream.of(System.getProperty("java.class.path").split(";")).collect(Collectors.joining("\r\n"));
         System.out.println(appClassLoadUrlList);
