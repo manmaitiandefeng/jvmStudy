@@ -1,2 +1,2 @@
 # jvmStudy
-jvm 联系
+jvm 练习
