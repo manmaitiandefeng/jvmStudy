@@ -15,6 +15,8 @@ import java.util.stream.Stream;
  */
 public class TestJDKClassLoader {
 
+    public static  int a = 5;
+
     public static void main(String[] args) {
         // 如果是null 加载器是顶级的引导类加载器 BootstrapClassLoader 是在jvm中用c++实现的
         System.out.println("String加载器：" + String.class.getClassLoader());
