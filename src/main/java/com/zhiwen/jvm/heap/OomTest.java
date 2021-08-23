@@ -11,6 +11,11 @@ import java.util.List;
  */
 public class OomTest {
 
+    private static void test(){
+        User user = new User();
+        ClassLoader classLoader = user.getClass().getClassLoader();
+        System.out.println(classLoader.getParent());
+    }
 
 
     public static void main(String[] args) throws InterruptedException {
