@@ -11,7 +11,7 @@ import java.util.List;
  */
 public class OomTest {
 
-    private static void test(){
+    private static void aaa(){
         User user = new User();
         ClassLoader classLoader = user.getClass().getClassLoader();
         System.out.println(classLoader.getParent());
@@ -21,7 +21,7 @@ public class OomTest {
     public static void main(String[] args) throws InterruptedException {
         List<User> list = new ArrayList<>();
         while (true) {
-//            Thread.sleep(10);
+            Thread.sleep(10);
             list.add(new User());
         }
     }
