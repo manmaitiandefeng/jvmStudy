@@ -5,6 +5,7 @@ import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.zhiwen.jvm.util.CastUtil;
 import com.zhiwen.jvm.util.HttpClientUtil;
+import org.apache.commons.codec.binary.Hex;
 import org.assertj.core.util.Maps;
 import org.junit.Assert;
 import org.junit.Before;
@@ -60,7 +61,7 @@ public class QyWeiXinMsgTest {
 
         Object o = redisTemplate.opsForValue().get("qywx_wx0d022bd4699839c9");
         String accessToken = CastUtil.castString(o);
-        //first getAccessToken
+        //first getAccessToken.
         String simplelist =QYWX_DOMAIN.concat("cgi-bin/user/simplelist?").concat(String.format("access_token=%s&department_id=%s", accessToken,19));
         String respStr = HttpClientUtil.get(simplelist);
         System.out.println("simplelist:"+respStr);
@@ -101,4 +102,6 @@ public class QyWeiXinMsgTest {
 
         System.out.println("消息id:"+respObj.getString("msgid"));
     }
+
+   
 }
