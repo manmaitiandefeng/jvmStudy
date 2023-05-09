@@ -26,7 +26,7 @@ public class CountDownLaunchRunner {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }finally {
-
+                countDownLatch.countDown();
             }
             try {
                 System.out.println("开始在医院药房排队买药....");
@@ -35,10 +35,9 @@ public class CountDownLaunchRunner {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }finally {
-
-            }
-            if (countDownLatch != null)
                 countDownLatch.countDown();
+            }
+
         });
 
         /*new Thread(new SeeDoctorTask(countDownLatch)).start();
